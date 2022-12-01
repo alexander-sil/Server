@@ -6,6 +6,8 @@ namespace Server.Repos
 {
     public interface IEntryRepository
     {
+        EntryDbContext _context { get; set; }
+        
         public int Create(Entry data);
 
         public bool BindNewBorrower(int id, Person borrower);

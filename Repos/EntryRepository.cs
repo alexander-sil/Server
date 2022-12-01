@@ -7,7 +7,7 @@ namespace Server.Repos
 {
     public class EntryRepository : IEntryRepository
     {
-        private readonly EntryDbContext _context;
+        public EntryDbContext _context { get; set; }
 
         public EntryRepository(EntryDbContext context)
         {
