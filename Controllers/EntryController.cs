@@ -13,9 +13,9 @@ namespace Server.Controllers
     [Route("api")]
     public class EntryController : ControllerBase
     {
-        private readonly EntryRepository _entryRepository;
+        private readonly IEntryRepository _entryRepository;
 
-        public EntryController(EntryRepository entryRepository)
+        public EntryController(IEntryRepository entryRepository)
         {
             _entryRepository = entryRepository;
         }
