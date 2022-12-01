@@ -8,7 +8,7 @@ namespace Server.HelperClasses
     {
         public static EntryOutModel ToEntryOutModel(this Entry entry)
         {
-            ICollection<Person> people = entry.BorrowingPeople;
+            List<Person> people = entry.BorrowingPeople;
             List<PersonOutModel> tempList = new List<PersonOutModel>();
 
             foreach (Person item in people)
@@ -33,7 +33,7 @@ namespace Server.HelperClasses
         {
             foreach (Entry entry in entries)
             {
-                ICollection<Person> people = entry.BorrowingPeople;
+                List<Person> people = entry.BorrowingPeople;
                 List<PersonOutModel> tempList = new List<PersonOutModel>();
 
                 foreach (Person item in people)

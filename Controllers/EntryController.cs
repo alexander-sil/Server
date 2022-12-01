@@ -27,9 +27,9 @@ namespace Server.Controllers
             return Ok(_entryRepository.Create(data.ToEntryDBModel()));
         }
 
-        [HttpPatch]
+        [HttpPut]
         [Route("bind-new-borrower")]
-        public ActionResult<bool> BindNewBorrower([FromHeader] int id, PersonInModel borrower)
+        public ActionResult<bool> BindNewBorrower([FromHeader] int id, [FromBody] PersonInModel borrower)
         {
             return Ok(_entryRepository.BindNewBorrower(id, borrower.ToPersonDBModel()));
         }
@@ -55,7 +55,7 @@ namespace Server.Controllers
             return Ok(_entryRepository.UpdateBorrowerBuilding(id, expression, building));
         }
 
-        [HttpPatch]
+        [HttpDelete]
         [Route("unbind-borrower")]
         public ActionResult<bool> UnbindBorrower([FromHeader] int entryId, [FromHeader] string expression)
         {
@@ -103,42 +103,42 @@ namespace Server.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPatch]
         [Route("update-state")]
         public ActionResult<bool> UpdateState([FromHeader] int id, [FromBody] State state)
         {
             return Ok(_entryRepository.UpdateState(id, state));
         }
 
-        [HttpPut]
+        [HttpPatch]
         [Route("update-name")]
         public ActionResult<bool> UpdateName([FromHeader] int id, [FromHeader] string name)
         {
             return Ok(_entryRepository.UpdateName(id, name));
         }
 
-        [HttpPut]
+        [HttpPatch]
         [Route("update-quantity")]
         public ActionResult<bool> UpdateQuantity([FromHeader] int id, [FromHeader] uint quantity)
         {
             return Ok(_entryRepository.UpdateQuantity(id, quantity));
         }
 
-        [HttpPut]
+        [HttpPatch]
         [Route("update-unit")]
         public ActionResult<bool> UpdateUnit([FromHeader] int id, [FromHeader] string unit)
         {
             return Ok(_entryRepository.UpdateUnit(id, unit));
         }
 
-        [HttpPut]
+        [HttpPatch]
         [Route("update-desc")]
         public ActionResult<bool> UpdateDescription([FromHeader] int id, [FromBody] string description)
         {
             return Ok(_entryRepository.UpdateDescription(id, description));
         }
 
-        [HttpPut]
+        [HttpPatch]
         [Route("update-owner")]
         public ActionResult<bool> UpdateOwner([FromHeader] int id, [FromHeader] string owner)
         {

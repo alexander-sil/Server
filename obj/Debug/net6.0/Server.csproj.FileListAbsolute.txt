@@ -97,3 +97,5 @@
 /Users/alexgreenhouse/Projects/ServerRepo/obj/Debug/net6.0/Server.pdb
 /Users/alexgreenhouse/Projects/ServerRepo/obj/Debug/net6.0/Server.genruntimeconfig.cache
 /Users/alexgreenhouse/Projects/ServerRepo/obj/Debug/net6.0/ref/Server.dll
+/Users/alexgreenhouse/Projects/ServerRepo/bin/Debug/net6.0/Castle.Core.dll
+/Users/alexgreenhouse/Projects/ServerRepo/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Proxies.dll

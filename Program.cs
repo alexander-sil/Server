@@ -1,6 +1,7 @@
 ﻿using Server.Data;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Proxies;
 
 namespace Server;
 
@@ -18,7 +19,7 @@ public class Program
 
         builder.Services.AddDbContext<EntryDbContext>(options =>
         {
-            options.UseSqlServer("Data Source=127.0.0.1,1433;Initial Catalog=EntryDatabase;User ID=sa;Password=Passlogin1;TrustServerCertificate=True;App=EntityFramework");
+            options.UseLazyLoadingProxies().UseSqlServer("Data Source=127.0.0.1,1433;Initial Catalog=EntryDatabase;User ID=sa;Password=Passlogin1;TrustServerCertificate=True;App=EntityFramework");
         });
 
         builder.Services.AddControllers();
