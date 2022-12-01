@@ -1,5 +1,4 @@
-﻿using Server.Enums;
-using System;
+﻿using System;
 
 namespace Server.Models
 {

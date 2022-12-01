@@ -24,7 +24,7 @@ namespace Server.HelperClasses
                 Name = entry.Name,
                 Owner = entry.Owner,
                 Quantity = entry.Quantity,
-                State = EnumHelper.ProcessEnumValue((Server.Enums.StateEnum)entry.State),
+                State = entry.State,
                 Unit = entry.Unit
             };
         }
@@ -49,7 +49,7 @@ namespace Server.HelperClasses
                     Name = entry.Name,
                     Owner = entry.Owner,
                     Quantity = entry.Quantity,
-                    State = EnumHelper.ProcessEnumValue((Server.Enums.StateEnum)entry.State),
+                    State = entry.State,
                     Unit = entry.Unit
                 };
             }
@@ -74,7 +74,7 @@ namespace Server.HelperClasses
                 Name = entry.Name,
                 Owner = entry.Owner,
                 Quantity = entry.Quantity,
-                State = (Server.Data.Models.State)entry.State,
+                State = entry.State,
                 Unit = entry.Unit
             };
         }

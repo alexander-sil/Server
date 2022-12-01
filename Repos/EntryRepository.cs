@@ -2,7 +2,6 @@
 using Server.Data;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 
 namespace Server.Repos
 {
@@ -111,7 +110,7 @@ namespace Server.Repos
             return _context.Entries.ToList().Where(f => f.Name.Contains(seacrhTerm)).ToList();
         }
 
-        public bool UpdateState(int id, State state)
+        public bool UpdateState(int id, string state)
         {
             Entry entry = GetById(id);
 

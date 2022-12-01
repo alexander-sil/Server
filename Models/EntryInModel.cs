@@ -1,11 +1,10 @@
-﻿using Server.Enums;
-using System;
+﻿using System;
 
 namespace Server.Models
 {
     public class EntryInModel
     {
-        public StateEnum State;
+        public string State { get; set; }
 
         public string Name { get; set; }
 

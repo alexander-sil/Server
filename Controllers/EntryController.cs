@@ -105,7 +105,7 @@ namespace Server.Controllers
 
         [HttpPatch]
         [Route("update-state")]
-        public ActionResult<bool> UpdateState([FromHeader] int id, [FromBody] State state)
+        public ActionResult<bool> UpdateState([FromHeader] int id, [FromHeader] string state)
         {
             return Ok(_entryRepository.UpdateState(id, state));
         }

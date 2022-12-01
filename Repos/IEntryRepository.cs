@@ -7,7 +7,7 @@ namespace Server.Repos
     public interface IEntryRepository
     {
         EntryDbContext _context { get; set; }
-        
+
         public int Create(Entry data);
 
         public bool BindNewBorrower(int id, Person borrower);
@@ -26,7 +26,7 @@ namespace Server.Repos
 
         public List<Entry> Search(string seacrhTerm);
 
-        public bool UpdateState(int id, State state);
+        public bool UpdateState(int id, string state);
 
         public bool UpdateName(int id, string name);
 
