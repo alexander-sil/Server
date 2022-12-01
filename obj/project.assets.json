@@ -3874,11 +3874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexgreenhouse/Projects/Server/Server.csproj",
+      "projectUniqueName": "/Users/alexgreenhouse/Projects/ServerRepo/Server.csproj",
       "projectName": "Server",
-      "projectPath": "/Users/alexgreenhouse/Projects/Server/Server.csproj",
+      "projectPath": "/Users/alexgreenhouse/Projects/ServerRepo/Server.csproj",
       "packagesPath": "/Users/alexgreenhouse/.nuget/packages/",
-      "outputPath": "/Users/alexgreenhouse/Projects/Server/obj/",
+      "outputPath": "/Users/alexgreenhouse/Projects/ServerRepo/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/alexgreenhouse/.nuget/NuGet/NuGet.Config"

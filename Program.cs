@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using Server.Data;
+using System.IO;
 using Microsoft.EntityFrameworkCore;
 
 namespace Server;
@@ -7,15 +8,17 @@ public class Program
 {
     public static void Main(string[] args)
     {
+#warning Программист, перед сборкой измени строку подключения и отправь миграцию на БД! 
+
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
 
         builder.Services.AddScoped<Repos.IEntryRepository, Repos.EntryRepository>();
 
-        builder.Services.AddDbContext<Server.Data.EntryDbContext>(options =>
+        builder.Services.AddDbContext<EntryDbContext>(options =>
         {
-            options.UseSqlServer(builder.Configuration["Settings:DatabaseOptions:ConnectionString"]);
+            options.UseSqlServer("Data Source=127.0.0.1,1433;Initial Catalog=EntryDatabase;User ID=sa;Password=Passlogin1;TrustServerCertificate=True;App=EntityFramework");
         });
 
         builder.Services.AddControllers();

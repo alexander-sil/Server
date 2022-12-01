@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "haIgb+/9B+qLm15MggcWGTVmfRcO7qPsvd22YRri50nZ8BTvJI7iodE4Whfqs3kawCRQHmUZBOm79Y77CEDL3Q==",
+  "dgSpecHash": "67gUOb6ehk4kM5CTzymaEjsbuAPF1JE7x+p7BBNdUtkQceLBcdW8geNzDCFrcHbAC31GJMM2/xx4RAHksyK8JQ==",
   "success": true,
-  "projectFilePath": "/Users/alexgreenhouse/Projects/Server/Server.csproj",
+  "projectFilePath": "/Users/alexgreenhouse/Projects/ServerRepo/Server.csproj",
   "expectedPackageFiles": [
     "/Users/alexgreenhouse/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/alexgreenhouse/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
