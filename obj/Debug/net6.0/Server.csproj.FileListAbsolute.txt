@@ -1,0 +1,7 @@
+/Users/alexgreenhouse/Projects/Server/obj/Debug/net6.0/Server.csproj.AssemblyReference.cache
+/Users/alexgreenhouse/Projects/Server/obj/Debug/net6.0/Server.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alexgreenhouse/Projects/Server/obj/Debug/net6.0/Server.AssemblyInfoInputs.cache
+/Users/alexgreenhouse/Projects/Server/obj/Debug/net6.0/Server.AssemblyInfo.cs
+/Users/alexgreenhouse/Projects/Server/obj/Debug/net6.0/Server.csproj.CoreCompileInputs.cache
+/Users/alexgreenhouse/Projects/Server/obj/Debug/net6.0/Server.MvcApplicationPartsAssemblyInfo.cs
+/Users/alexgreenhouse/Projects/Server/obj/Debug/net6.0/Server.MvcApplicationPartsAssemblyInfo.cache
