@@ -8,7 +8,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-#warning Программист, перед сборкой измени строку подключения и отправь миграцию на БД! 
+#warning Программист, перед сборкой измени строку подключения и отправь миграцию на БД!
 
         var builder = WebApplication.CreateBuilder(args);
 
