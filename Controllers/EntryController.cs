@@ -38,7 +38,7 @@ namespace Server.Controllers
         [Route("update-borrower-name")]
         public ActionResult<bool> UpdateBorrowerName([FromHeader] int id, [FromHeader] string expression, [FromHeader] string newName)
         {
-            return Ok(_entryRepository.UpdateBorrowerClass(id, expression, newName));
+            return Ok(_entryRepository.UpdateBorrowerName(id, expression, newName));
         }
 
         [HttpPatch]
