@@ -53,7 +53,7 @@ namespace Server.Repos
         public bool UpdateBorrowerClass(int id, string expression, string className)
         {
             Entry entry = _context.Entries.FirstOrDefault(f => f.Id == id);
-            Person borrower = entry.BorrowingPeople.FirstOrDefault(f => f.Name.Contains(expression));
+            Person borrower = entry.BorrowingPeople.FirstOrDefault(f => f.Class.Contains(expression));
 
             if (entry != null && borrower != null)
             {
@@ -68,7 +68,7 @@ namespace Server.Repos
         public bool UpdateBorrowerBuilding(int id, string expression, string building)
         {
             Entry entry = _context.Entries.FirstOrDefault(f => f.Id == id);
-            Person borrower = entry.BorrowingPeople.FirstOrDefault(f => f.Name.Contains(expression));
+            Person borrower = entry.BorrowingPeople.FirstOrDefault(f => f.Building.Contains(expression));
 
             if (entry != null && borrower != null)
             {
