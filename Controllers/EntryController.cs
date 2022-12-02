@@ -90,9 +90,9 @@ namespace Server.Controllers
 
         [HttpGet]
         [Route("get-search")]
-        public IActionResult Search([FromHeader] string seacrhTerm)
+        public IActionResult Search([FromHeader] string searchTerm)
         {
-            List<Entry> entries = _entryRepository.Search(seacrhTerm);
+            List<Entry> entries = _entryRepository.Search(searchTerm);
 
             List<EntryOutModel> converted = entries.ToEntryOutModelBulk().ToList();
 
