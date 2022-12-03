@@ -198,7 +198,7 @@ namespace Server.Repos
         {
             Entry entry = GetById(id);
 
-            if (entry != null)
+            if ((entry != null) && (entry.BorrowingPeople.Count < 1))
             {
                 _context.Entries.Remove(entry);
                 _context.SaveChanges();
