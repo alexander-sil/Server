@@ -2,11 +2,13 @@
 using Server.Models;
 using Server.Repos;
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Server.Data.Models;
+using System.Linq.Expressions;
 
 namespace Server.Controllers
 {
@@ -38,28 +40,47 @@ namespace Server.Controllers
         [Route("update-borrower-name")]
         public ActionResult<bool> UpdateBorrowerName([FromHeader] int id, [FromHeader] string expression, [FromHeader] string newName)
         {
-            return Ok(_entryRepository.UpdateBorrowerName(id, expression, newName));
+            IdnMapping map = new IdnMapping();
+
+            string ex = map.GetUnicode(expression);
+            string nn = map.GetUnicode(newName);
+
+            return Ok(_entryRepository.UpdateBorrowerName(id, ex, nn));
         }
 
         [HttpPatch]
         [Route("update-borrower-class")]
         public ActionResult<bool> UpdateBorrowerClass([FromHeader] int id, [FromHeader] string expression, [FromHeader] string className)
         {
-            return Ok(_entryRepository.UpdateBorrowerClass(id, expression, className));
+            IdnMapping map = new IdnMapping();
+
+            string ex = map.GetUnicode(expression);
+            string nn = map.GetUnicode(className);
+
+            return Ok(_entryRepository.UpdateBorrowerClass(id, ex, nn));
         }
 
         [HttpPatch]
         [Route("update-borrower-building")]
         public ActionResult<bool> UpdateBorrowerBuilding([FromHeader] int id, [FromHeader] string expression, [FromHeader] string building)
         {
-            return Ok(_entryRepository.UpdateBorrowerBuilding(id, expression, building));
+            IdnMapping map = new IdnMapping();
+
+            string ex = map.GetUnicode(expression);
+            string nn = map.GetUnicode(building);
+
+            return Ok(_entryRepository.UpdateBorrowerBuilding(id, ex, nn));
         }
 
         [HttpDelete]
         [Route("unbind-borrower")]
         public ActionResult<bool> UnbindBorrower([FromHeader] int entryId, [FromHeader] string expression)
         {
-            return Ok(_entryRepository.UnbindBorrower(entryId, expression));
+            IdnMapping map = new IdnMapping();
+
+            string ex = map.GetUnicode(expression);
+
+            return Ok(_entryRepository.UnbindBorrower(entryId, ex));
         }
 
         [HttpGet]
@@ -92,7 +113,11 @@ namespace Server.Controllers
         [Route("get-search")]
         public IActionResult Search([FromHeader] string searchTerm)
         {
-            List<Entry> entries = _entryRepository.Search(searchTerm);
+            IdnMapping map = new IdnMapping();
+
+            string ex = map.GetUnicode(searchTerm);
+
+            List<Entry> entries = _entryRepository.Search(ex);
 
             List<EntryOutModel> converted = entries.ToEntryOutModelBulk().ToList();
 
@@ -107,14 +132,23 @@ namespace Server.Controllers
         [Route("update-state")]
         public ActionResult<bool> UpdateState([FromHeader] int id, [FromHeader] string state)
         {
-            return Ok(_entryRepository.UpdateState(id, state));
+            IdnMapping map = new IdnMapping();
+
+
+            string nn = map.GetUnicode(state);
+
+            return Ok(_entryRepository.UpdateState(id, nn));
         }
 
         [HttpPatch]
         [Route("update-name")]
         public ActionResult<bool> UpdateName([FromHeader] int id, [FromHeader] string name)
         {
-            return Ok(_entryRepository.UpdateName(id, name));
+            IdnMapping map = new IdnMapping();
+
+            string ex = map.GetUnicode(name);
+
+            return Ok(_entryRepository.UpdateName(id, ex));
         }
 
         [HttpPatch]
@@ -128,7 +162,11 @@ namespace Server.Controllers
         [Route("update-unit")]
         public ActionResult<bool> UpdateUnit([FromHeader] int id, [FromHeader] string unit)
         {
-            return Ok(_entryRepository.UpdateUnit(id, unit));
+            IdnMapping map = new IdnMapping();
+
+            string ex = map.GetUnicode(unit);
+
+            return Ok(_entryRepository.UpdateUnit(id, ex));
         }
 
         [HttpPatch]
@@ -142,7 +180,11 @@ namespace Server.Controllers
         [Route("update-owner")]
         public ActionResult<bool> UpdateOwner([FromHeader] int id, [FromHeader] string owner)
         {
-            return Ok(_entryRepository.UpdateOwner(id, owner));
+            IdnMapping map = new IdnMapping();
+
+            string ex = map.GetUnicode(owner);
+
+            return Ok(_entryRepository.UpdateOwner(id, ex));
         }
 
         [HttpDelete]
