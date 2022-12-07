@@ -173,7 +173,7 @@ namespace Server.Controllers
         [Route("update-desc")]
         public ActionResult<bool> UpdateDescription([FromHeader] int id, [FromBody] string description)
         {
-            return Ok(_entryRepository.UpdateDescription(id, description));
+            return Ok(_entryRepository.UpdateDescription(id, description.ToLower()));
         }
 
         [HttpPatch]

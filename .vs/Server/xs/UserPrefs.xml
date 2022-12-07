@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{11B4DE82-520C-4655-96EC-5AB46635F192}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/EntryController.cs">
+  <MonoDevelop.Ide.ItemProperties.Server PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Properties/launchSettings.json">
     <Files>
       <File FileName="Program.cs" Line="12" Column="36" />
       <File FileName="../Server.Data/EntryDbContext.cs" Line="1" Column="1" />
       <File FileName="Server.csproj" Line="42" Column="1" />
-      <File FileName="Controllers/EntryController.cs" Line="41" Column="58" />
+      <File FileName="Controllers/EntryController.cs" Line="137" Column="1" />
       <File FileName="Repos/EntryRepository.cs" Line="133" Column="30" />
       <File FileName="Repos/IEntryRepository.cs" Line="17" Column="21" />
       <File FileName="appsettings.json" Line="8" Column="22" />
@@ -31,6 +31,7 @@
               <Node name="Controllers" expanded="True" />
               <Node name="HelperClasses" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
               <Node name="Repos" expanded="True" />
             </Node>
             <Node name="Server.Data" expanded="True">
@@ -45,7 +46,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Server PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -57,10 +58,9 @@
       <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/Repos/EntryRepository.cs" relfile="Repos/EntryRepository.cs" line="43" column="1" />
       <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/Repos/EntryRepository.cs" relfile="Repos/EntryRepository.cs" line="41" column="1" />
       <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/Repos/EntryRepository.cs" relfile="Repos/EntryRepository.cs" line="40" column="1" />
-      <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/Controllers/EntryController.cs" relfile="Controllers/EntryController.cs" line="40" column="1" />
-      <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/Controllers/EntryController.cs" relfile="Controllers/EntryController.cs" line="40" column="1" />
-      <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/Controllers/EntryController.cs" relfile="Controllers/EntryController.cs" line="41" column="1" />
       <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/Controllers/EntryController.cs" relfile="Controllers/EntryController.cs" line="42" column="1" />
+      <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/Controllers/EntryController.cs" relfile="Controllers/EntryController.cs" line="42" column="1" />
+      <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/Controllers/EntryController.cs" relfile="Controllers/EntryController.cs" line="49" column="1" />
       <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/HelperClasses/ExtensionsHelper.cs" relfile="HelperClasses/ExtensionsHelper.cs" line="58" column="1" />
       <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/HelperClasses/ExtensionsHelper.cs" relfile="HelperClasses/ExtensionsHelper.cs" line="60" column="1" />
       <Breakpoint file="/Users/alexgreenhouse/Projects/ServerRepo/HelperClasses/ExtensionsHelper.cs" relfile="HelperClasses/ExtensionsHelper.cs" line="32" column="1" />
